@@ -9,6 +9,8 @@ In diesem Projekt wurde eine Active-Directory-Umgebung mit Windows Server und ei
 ## Overview
 This project documents the setup of a basic Active Directory home lab using Windows Server, Windows Client, DNS, and VirtualBox. The goal was to simulate a small enterprise environment where a Windows client joins a domain and authenticates using a domain user.
 
+---
+
 ## Lab Architecture
 
 ```text
@@ -20,7 +22,7 @@ Windows Server (Domain Controller + DNS)
 Domain: lab.local
 IP: 192.168.56.101
 ```
-
+---
 ## Technologies Used
 
 - Windows Server 2025 Evaluation
@@ -29,7 +31,7 @@ IP: 192.168.56.101
 - DNS Server
 - VirtualBox
 - Host-only networking
-
+---
 ## What I Built
 
 - Installed Windows Server in VirtualBox
@@ -40,7 +42,7 @@ IP: 192.168.56.101
 - Installed a Windows client machine
 - Joined the client to the domain
 - Logged into the client using an Active Directory domain user
-
+---
 ## Network Configuration
 
 ### Domain Controller
@@ -60,7 +62,7 @@ Hostname: CLIENT-01
 IP Address: 192.168.56.102
 DNS Server: 192.168.56.101
 ```
-
+---
 ## Verification Commands
 
 ### Check current logged-in user
@@ -117,7 +119,7 @@ Address: 192.168.56.101
 ```cmd
 ping 192.168.56.101
 ```
-
+---
 ## Troubleshooting
 
 ### 1. Domain could not be found
@@ -158,7 +160,7 @@ ping 192.168.56.101
 sc query dns
 netstat -an | find ":53"
 ```
-
+---
 ## What I Learned
 
 - How Active Directory depends heavily on DNS
@@ -167,18 +169,18 @@ netstat -an | find ":53"
 - How Windows clients locate a Domain Controller
 - How to troubleshoot DNS and domain join issues
 - How to verify domain authentication using command-line tools
-
+---
 ## Result
 
 The Windows client successfully joined the `lab.local` domain and a domain user was able to log in.
-
+---
 Verification:
 
 ```text
 whoami → lab\testuser
 echo %logonserver% → \\WIN-8T4VA64770H
 ```
-
+---
 ## Next Improvements
 
 - Create Organizational Units (OUs)
@@ -187,7 +189,7 @@ echo %logonserver% → \\WIN-8T4VA64770H
 - Map a shared network drive
 - Configure file sharing and permissions
 - Add Ubuntu Server to the lab
-
+---
 ## Screenshots
 
 ### DNS Configuration
@@ -217,3 +219,4 @@ echo %logonserver% → \\WIN-8T4VA64770H
 ### Logon Server Verification
 
 ![Logon Server](images/logonserver.png)
+---
