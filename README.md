@@ -187,3 +187,33 @@ echo %logonserver% → \\WIN-8T4VA64770H
 - Map a shared network drive
 - Configure file sharing and permissions
 - Add Ubuntu Server to the lab
+
+## Screenshots
+
+### DNS Configuration
+
+![DNS Manager](images/dns-manager.png)
+
+### Server Network Configuration
+
+![Server IP Config](images/ipconfig-server.png)
+
+### Active Directory Users
+
+![AD Users](images/ad-users.png)
+
+### Client Network Configuration
+
+![Client IP Config](images/ipconfig-client.png)
+
+### Domain Join Verification
+
+![Domain Join](images/domain-join.png)
+
+### Domain User Login
+
+![Whoami Output](images/whoami.png)
+
+### Logon Server Verification
+
+![Logon Server](images/logonserver.png)
