@@ -220,3 +220,10 @@ echo %logonserver% → \\WIN-8T4VA64770H
 
 ![Logon Server](images/logonserver.png)
 ---
+## Key Takeaways
+
+- Active Directory relies heavily on DNS for domain resolution
+- Domain Controllers should always use a static IP address
+- Clients must use the Domain Controller as their DNS server
+- Domain users are centrally managed and can log into any domain-joined machine
+- Troubleshooting requires isolating network, DNS, and service-level issues
