@@ -173,7 +173,7 @@ netstat -an | find ":53"
 ---
 ## Result
 
-The Windows client successfully joined the `lab.local` domain and a domain user was able to log in.
+The Windows client successfully joined the `lab.local` domain and a domain user was able to log in. This demonstrates centralized configuration management using Active Directory, where administrators can control user environments across multiple machines from a single location.
 ---
 Verification
 
@@ -184,7 +184,7 @@ echo %logonserver% → \\WIN-8T4VA64770H
 ---
 ## Group Policy (GPO)
 
-A Group Policy Object was created and linked to the domain to enforce a desktop wallpaper for domain users.
+A Group Policy Object was created and linked to the domain to enforce a desktop wallpaper for domain users. 
 
 ### Configuration
 
@@ -207,7 +207,6 @@ Verification:
 ```cmd
 gpresult /r
 ```
-This demonstrates centralized configuration management using Active Directory.
 ---
 ## Next Improvements
 
@@ -217,6 +216,7 @@ This demonstrates centralized configuration management using Active Directory.
 - Map network drives using Group Policy
 - Add a second client machine to simulate multi-user environment
 - Integrate a Linux (Ubuntu) server into the network
+- Group Policy enables centralized configuration management across all domain-joined machines
 ---
 ## Screenshots
 
