@@ -181,6 +181,31 @@ whoami → lab\testuser
 echo %logonserver% → \\WIN-8T4VA64770H
 ```
 ---
+## Group Policy (GPO)
+
+A Group Policy Object was created and linked to the domain to enforce a desktop wallpaper for domain users.
+
+### Configuration
+
+Path:
+User Configuration → Administrative Templates → Desktop → Desktop → Desktop Wallpaper
+
+Wallpaper path:
+C:\Windows\Web\Wallpaper\Windows\img0.jpg
+
+### Result
+
+The policy was successfully applied to the client machine after running:
+
+```cmd
+gpupdate /force
+```
+
+Verification:
+
+```cmd
+gpresult /r
+```
 ## Next Improvements
 
 - Create Organizational Units (OUs)
@@ -219,6 +244,18 @@ echo %logonserver% → \\WIN-8T4VA64770H
 ### Logon Server Verification
 
 ![Logon Server](images/logonserver.png)
+
+###GPO Created
+
+![GPO Created](images/gpo-created.png)
+
+### GPO Applied
+
+![GPO Applied](images/gpo-applied.png)
+
+### Wallpaper Result
+
+![Wallpaper Result](images/wallpaper.png)
 ---
 ## Key Takeaways
 
