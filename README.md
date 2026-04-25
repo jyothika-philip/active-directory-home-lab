@@ -245,7 +245,7 @@ gpresult /r
 
 ![Logon Server](images/logonserver.png)
 
-###GPO Created
+### GPO Created
 
 ![GPO Created](images/gpo-created.png)
 
