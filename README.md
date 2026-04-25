@@ -2,12 +2,13 @@
 
 ## Zusammenfassung (Deutsch)
 
-In diesem Projekt wurde eine Active-Directory-Umgebung mit Windows Server und einem Windows-Client aufgebaut. Der Server wurde als Domain Controller konfiguriert und stellt gleichzeitig den DNS-Dienst bereit. Ein Client-System wurde erfolgreich in die Domäne `lab.local` integriert und die Anmeldung mit einem Domänenbenutzer getestet. Ziel war es, grundlegende Konzepte wie DNS, Domain Join und Benutzerverwaltung in einer realistischen IT-Umgebung zu verstehen.
+In diesem Projekt wurde eine Active-Directory-Umgebung mit Windows Server und einem Windows-Client aufgebaut. Der Server wurde als Domain Controller konfiguriert und stellt gleichzeitig den DNS-Dienst bereit. Ein Client-System wurde erfolgreich in die Domäne `lab.local` integriert, und die Anmeldung mit einem Domänenbenutzer wurde getestet. Ziel war es, grundlegende Konzepte wie DNS, Domain Join und Benutzerverwaltung in einer realistischen IT-Umgebung zu verstehen.
 
 ---
 
 ## Overview
-This project documents the setup of a basic Active Directory home lab using Windows Server, Windows Client, DNS, and VirtualBox. The goal was to simulate a small enterprise environment where a Windows client joins a domain and authenticates using a domain user.
+
+This project documents the setup of a basic Active Directory home lab using Windows Server, a Windows client, DNS, and VirtualBox. The environment simulates a real enterprise network where a client machine joins a domain and authenticates using centralized user management through Active Directory.
 
 ---
 
@@ -174,7 +175,7 @@ netstat -an | find ":53"
 
 The Windows client successfully joined the `lab.local` domain and a domain user was able to log in.
 ---
-Verification:
+Verification
 
 ```text
 whoami → lab\testuser
@@ -206,14 +207,16 @@ Verification:
 ```cmd
 gpresult /r
 ```
+This demonstrates centralized configuration management using Active Directory.
+---
 ## Next Improvements
 
-- Create Organizational Units (OUs)
-- Create security groups
-- Apply Group Policy Objects (GPOs)
-- Map a shared network drive
-- Configure file sharing and permissions
-- Add Ubuntu Server to the lab
+- Create Organizational Units (OUs) for structured user management
+- Implement security groups for role-based access control
+- Configure shared folders with group-based permissions
+- Map network drives using Group Policy
+- Add a second client machine to simulate multi-user environment
+- Integrate a Linux (Ubuntu) server into the network
 ---
 ## Screenshots
 
