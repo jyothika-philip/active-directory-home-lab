@@ -208,15 +208,40 @@ Verification:
 gpresult /r
 ```
 ---
+
+## File Sharing and Access Control
+
+A shared folder was created on the Domain Controller and access was controlled using an Active Directory security group.
+
+### Configuration
+
+- Folder: `C:\Shared`
+- Security Group: `SharedUsers`
+- Permissions:
+  - Removed default `Everyone` access
+  - Granted **Modify** permissions to `SharedUsers`
+
+### Access Test
+
+- Access was successful when the user was part of the `SharedUsers` group
+- After removing the user from the group and restarting the client, access was denied
+
+### Key Concept
+
+This demonstrates the difference between:
+
+- **Authentication** → verifying user identity  
+- **Authorization** → controlling access to resources  
+
+Access permissions are evaluated when a session is established. A restart or session reset is required for permission changes to take effect.
 ## Next Improvements
 
 - Create Organizational Units (OUs) for structured user management
-- Implement security groups for role-based access control
-- Configure shared folders with group-based permissions
+- Implement role-based access control using multiple security groups
 - Map network drives using Group Policy
 - Add a second client machine to simulate multi-user environment
 - Integrate a Linux (Ubuntu) server into the network
-- Group Policy enables centralized configuration management across all domain-joined machines
+
 ---
 ## Screenshots
 
@@ -259,6 +284,18 @@ gpresult /r
 ### Wallpaper Result
 
 ![Wallpaper Result](images/wallpaper.png)
+
+### Shared Folder Permissions
+
+![Folder Permissions](images/folder-permissions.png)
+
+### Access Granted
+
+![Access Success](images/access-success.png)
+
+### Access Denied
+
+![Access Denied](images/access-denied.png)
 ---
 ## Key Takeaways
 
@@ -267,3 +304,5 @@ gpresult /r
 - Clients must use the Domain Controller as their DNS server
 - Domain users are centrally managed and can log into any domain-joined machine
 - Troubleshooting requires isolating network, DNS, and service-level issues
+- Group Policy enables centralized configuration management across all domain-joined machines
+- Group-based permissions allow centralized control over access to shared resources
