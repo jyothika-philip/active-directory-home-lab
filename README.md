@@ -173,8 +173,8 @@ netstat -an | find ":53"
 ---
 ## Result
 
-
 The Windows client successfully joined the `lab.local` domain and a domain user was able to log in. This demonstrates centralized configuration management using Active Directory, where administrators can control user environments across multiple machines from a single location.
+
 ---
 Verification
 
